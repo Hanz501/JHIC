@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { FaChevronRight } from "react-icons/fa6";
 
 const TABS = ["Admission", "Campuses", "Major"];
 
@@ -75,25 +76,28 @@ export default function FindMore() {
       {activeTab === "Campuses" && (
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {["Campus A", "Campus C"].map((campus) => (
-            <div key={campus} className="flex min-h-[40vh] flex-col justify-end rounded-md bg-[var(--card-gray)] p-6 min-h-[40vh]">
+            <div key={campus} className="flex min-h-[40vh] flex-col justify-end rounded-md bg-[var(--card-gray)] p-6 min-h-[40vh] cursor-pointer">
               <p className="text-s font-medium text-white">SMK Al Bahri</p>
               <h2 className="mt-1 text-2xl font-bold text-white">{campus}</h2>
               <hr className="mt-3 border-t-3 border-white" />
+              <div className="mt-2 flex items-center justify-between gap-2">
               <p className="mt-2 text-sm text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
+              <FaChevronRight className="scale-115 h-3 w-3 mt-2 flex-shrink-0 text-white transition-transform duration-200 hover:scale-140" />
+            </div>
             </div>
           ))}
           <i className="mt-2 mb-6 text-l text-[var(--text-blue)]">
                 Lorem ipsum <b>dolor sit amet</b>, consectetur adipiscing elit.
               </i>
-        </div>
+            </div>
       )}
 
       {activeTab === "Major" && (
         <div className="mt-8">
           <div className="mb-4 flex gap-2">
-            <button type="button" className="rounded-md border text-[var(--text-blue)] px-4 py-1 text-sm font-semibold text-[var(--text-blue)] transition hover:bg-[var(--text-blue)] hover:text-white cursor-pointer">
+            <button type="button" className="rounded-md border text-[var(--text-blue)] px-4 py-1 text-sm font-semibold text-[var(--text-blue)] transition duration-200 hover:bg-[var(--text-blue)] hover:text-white cursor-pointer">
               Campus A
             </button>
             <button type="button" className="rounded-md bg-[var(--text-blue)] px-4 py-1 text-sm font-semibold text-white">

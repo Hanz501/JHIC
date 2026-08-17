@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaChevronRight } from "react-icons/fa6";
 
 const POSTS = [
   { date: "DD/MM/YY", author: "Al Bahri", title: "Lorem ipsum dolor sit am consectetur adipiscing el" },
@@ -16,12 +17,12 @@ export default function Blog() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 ml-15 flex items-center justify-between">
           <div className="text-center flex-1">
-            <p className="text-sm font-semibold text-[var(--text-purple)]">Blog</p>
+            <p className="text-m font-semibold text-[var(--text-purple)]">Blog</p>
             <h2 className="mt-1 text-2xl font-bold text-[var(--text-purple)]">Our Latest News</h2>
           </div>
-          <a href="#blog" className="group relative inline-block text-sm font-semibold text-[var(--text-purple)]">
+          <a href="#blog" className="group relative inline-block mt-9 text-sm font-semibold text-[var(--text-purple)]">
             See More
-            <span className="absolute -bottom-0.5 left-0 h-0.5 w-full origin-left scale-x-0 bg-[var(--text-blue)] transition-transform duration-300 ease-out group-hover:scale-x-100" />
+            <span className="absolute -bottom-0.5 left-0 h-0.5 w-full origin-left scale-x-0 bg-[var(--text-purple)] transition-transform duration-300 ease-out group-hover:scale-x-100" />
           </a>
         </div>
 
@@ -59,7 +60,7 @@ export default function Blog() {
             className="flex h-8 w-8 items-center justify-center rounded-md bg-[var(--text-purple)] hover:bg-[var(--bg-purple)] text-white"
             aria-label="Next page"
           >
-            &rsaquo;
+           <FaChevronRight className="h-3 w-3" />
           </button>
         </div>
       </div>
